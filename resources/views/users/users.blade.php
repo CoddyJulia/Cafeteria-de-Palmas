@@ -6,17 +6,30 @@
     </x-slot>
 
     <div class="py-12">
+        @if (session('status') )
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 my-5">
+            <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-gray-800 dark-tect-green-400" role="alert">
+                <span class="font-medium"> Success alert! </span> {{ session('status')}}
+            </div>
+        </div>
+        @endif
+
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-blue overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class= "p-6 text-gray-900 dark:text-gray-100">
                 
-                <h2 class="float-left">
+                 <h2 class="float-left">
                      {{ $header}}
                 </h2>
-                
-                    <button data-modal-target="staticModal" data-modal-toggle="staticModal" class="float-right rounded-full bg-cyan-500 p-1 hover:bg-sky-700" type="button">
-                        Add Users
-                    </button>
+               
+
+                    <a href="{{ url('/users/add')}}">
+                         <button class="float-right rounded-full bg-cyan-500 p-1 hover:bg-sky-700">
+                            Add Users
+                        </button>
+
+                    </a>
+                    
                 
                     <table class="table-auto w-full">
                             <thead>

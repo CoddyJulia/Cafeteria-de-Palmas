@@ -120,6 +120,13 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                 </div>
             </div>
         </section>
+         
+       
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-gren">Map</h2>
+               
+                <div class="container d-flex align-items-center flex-column">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d492.6544730942791!2d125.540991!3d8.950408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301c126536b940d%3A0x8074df6afd809634!2sCafeteria%20De%20Palmas!5e0!3m2!1sen!2sus!4v1674899691304!5m2!1sen!2sus" width="1000" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
         @include('homepage.includes.footer')
 
@@ -138,7 +145,7 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -170,7 +177,7 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -202,7 +209,7 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -234,7 +241,7 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -266,7 +273,7 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -298,7 +305,7 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
