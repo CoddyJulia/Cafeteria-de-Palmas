@@ -6,14 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\UserController\delete;
+
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         return view('users.users', [
@@ -26,15 +24,9 @@ class UserController extends Controller
     {
         return view('users.form', [
             'header'    => 'Add User',
-            
         ]);
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         // For Validation
@@ -46,49 +38,68 @@ class UserController extends Controller
 
         // For Storing after Validation
         User::create([
-            'name' => $request ->name,
-            'email' => $request ->email,
-            'password' => Hash::make($request->password),
-        ]); 
-
+            'name'  =>  $request->name,
+            'email'  =>  $request->email,
+            'password'  =>  Hash::make($request->password),
+        ]);
 
         session()->flash('status', 'Added User Successfully!');
 
+        $request->validate([
+            'image' => 'required|mimes:jpeg,png,bmp,gif|max: 2000'
+            ]);
+            $uploadImage = $request->file('image');
+            $imageNameWithExt = $uploadImage->getClientOriginalName(); 
+            $imageName =pathinfo($imageNameWithExt, PATHINFO_FILENAME);
+            $imageExt=$uploadImage->getClientOriginalExtension();
+            $storeImage=$imageName . time() . "." . $imageExt;
+            $request->image->move(public_path('images'), $storeImage);
+            $carousel= slider::create([
+                'image' => $storeImage
+            ]);
+
         // Redirect to the List of Users
-        return redirect ('/users') ;
+        return redirect('/users');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show($id)
     {
-        //
+        $user = User::find($id);
+
+        return view('users.form', [
+                'header'    => 'Update User',
+                'users'      => $user
+            ]); 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        // For Validation
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255']
+        ]);
+
+        $user = User::find($id);
+
+        $user->update($request->all());
+
+        session()->flash('status', 'Updated User Successfully!');
+
+        return redirect('/users/update/' . $user->id);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    
+    public function delete($id)
     {
-        //
+
+        $user = User::find($id);
+        $user -> delete();
+
+        $user->delete($id);
+
+        return Redirect('/users');
     }
+
 }

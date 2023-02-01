@@ -4,14 +4,19 @@
  
 @section('content')
 
+<div class="bg-image" 
+     style="background-image: url('assets/img/portfolio/1.jpg');
+            height: 100vh">
+</div>
+
+
+
        @include('homepage.includes.nav')
 
         <!-- Masthead-->
-        <header class="masthead-avatar mb-5" src="assets/img/portfolio/1.jpg">
+        <header class="masthead-avatar mb-5">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/portfolio/1.jpg" alt="..." />
-                <!-- Masthead Heading-->
+               
                 <h1 class="masthead-heading mb-0">Cafeteria-de-Palmas</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -24,16 +29,47 @@
             </div>
         </header>
         <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
+        <section class="page-section portfolio bg-primary" id="announcement">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-light mb-0">Announcement</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-line bg-light"></div>
+                    <div class="divider-custom-icon bg-light"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line bg-light"></div>
                 </div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  {{-- <div class="carousel-inner">
+    <div class="carousel-item active align-items-center">
+   
+      <img class="img-fluid" src="assets/img/portfolio/10.jpg" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="assets/img/portfolio/8.jpg" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="assets/img/portfolio/11.jpg" alt="..." />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> --}}
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Portfolio Item 1-->
@@ -93,11 +129,15 @@
                 </div>
             </div>
         </section>
+
+    
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+
+                
+                <h2 class="page-section-heading text-center text-uppercase text-light mb-0">About</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -123,22 +163,19 @@ Welcome to experience the tropical  beach vibe at Cafeteria de Palmas every day 
          
        
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-gren">Map</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-green">Map</h2>
                
                 <div class="container d-flex align-items-center flex-column">
        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d492.6544730942791!2d125.540991!3d8.950408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301c126536b940d%3A0x8074df6afd809634!2sCafeteria%20De%20Palmas!5e0!3m2!1sen!2sus!4v1674899691304!5m2!1sen!2sus" width="1000" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
         @include('homepage.includes.footer')
 
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
-        </div>
+ 
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content">
+                <div class="modaql-content">
                     <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
                     <div class="modal-body text-center pb-5">
                         <div class="container">
